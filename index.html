@@ -164,27 +164,64 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-我的第一篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-EXCELVBA(遇坑记录 第一坑)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/29/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/">我的第一篇</a>
+      <a class="article-title" href="/2020/02/29/EXCELVBA(%E9%81%87%E5%9D%91%E8%AE%B0%E5%BD%95%20%E7%AC%AC%E4%B8%80%E5%9D%91)/">EXCELVBA(遇坑记录 第一坑)</a>
     </h1>
   
 
         
-        <a href="/2020/02/29/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/" class="archive-article-date">
-  	<time datetime="2020-02-29T13:31:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-29</time>
+        <a href="/2020/02/29/EXCELVBA(%E9%81%87%E5%9D%91%E8%AE%B0%E5%BD%95%20%E7%AC%AC%E4%B8%80%E5%9D%91)/" class="archive-article-date">
+  	<time datetime="2020-02-29T13:31:11.098Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">'我的第一篇博客'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+        <h1 id="EXCELVBA-遇坑记录-第一坑"><a href="#EXCELVBA-遇坑记录-第一坑" class="headerlink" title="EXCELVBA(遇坑记录 第一坑)"></a>EXCELVBA(遇坑记录 第一坑)</h1><p>需求：取得EXCEL某列，有值的单元格数量。</p>
+<p>例如：下面的表格中，A列的有效单元格数量为3，B列为2。</p>
+<table>
+<thead>
+<tr>
+<th>A列</th>
+<th>B列</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>12</td>
+<td>569</td>
+</tr>
+<tr>
+<td>52</td>
+<td>789</td>
+</tr>
+<tr>
+<td>32</td>
+<td>空白</td>
+</tr>
+<tr>
+<td>空白</td>
+<td>空白</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>但是在实际操作中，会发现，EXCEL单元格如果是被键盘上的DELETE键删除的话，</p>
+</blockquote>
+<blockquote>
+<p>依然会被算为有效单元格。这个时候，用Usedrange显然就不太合适，而且并不准确了。</p>
+</blockquote>
+<hr>
+<p>推荐使用下面的代码，取得某列中，有值的单元格数量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">objsheet.range(&quot;A1:A&quot; &amp; objsheet.range(&quot;A65536&quot;).end(xlup).row).entirerow.rows.count</span><br></pre></td></tr></table></figure>
+
+
+
       
 
       
@@ -196,7 +233,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/29/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/02/29/EXCELVBA(%E9%81%87%E5%9D%91%E8%AE%B0%E5%BD%95%20%E7%AC%AC%E4%B8%80%E5%9D%91)/">展开全文 >></a>
         </p>
       
 
@@ -473,7 +510,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">吉林大学09级&lt;br&gt;就职于大连某外包公司。&lt;br&gt;会日语，会写点设计，会编点代码，会一点测试。&lt;br&gt;然后就不会啥了。</div>
   	  	
     	</section>
     
